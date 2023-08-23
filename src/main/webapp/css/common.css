@@ -1,0 +1,70 @@
+* {
+    font: 14px/18px 'OpenSansRegular';
+}
+.bold {
+    font-weight: bold;
+    font-family: 'OpenSansBold', sans-serif;
+}
+h1 {
+    margin-bottom: 10px;
+    font: bold 28px/32px 'OpenSansBold';
+}
+h2 {
+    margin-bottom: 10px;
+    font: bold 24px/28px 'OpenSansBold';
+}
+h3 {
+    margin-bottom: 10px;
+    font: bold 20px/24px 'OpenSansBold';
+}
+h4 {
+    margin-bottom: 10px;
+    font: bold 18px/22px 'OpenSansBold';
+}
+h5 {
+    margin-bottom: 10px;
+    font: bold 16px/20px 'OpenSansBold';
+}
+h6 {
+    margin-bottom: 10px;
+    font: bold 14px/18px 'OpenSansBold';
+}
+input {
+    width: 200px;
+    height: 25px;
+    padding: 0 5px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+select {
+    width: 200px;
+    height: 25px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.absolute {
+    position: absolute;
+}
+.relative {
+    position: relative;
+}
+.block {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-right {
+    text-align: right !important;
+}
+.text-left {
+    text-align: left !important;
+}
+.red {
+    color: #de002b;
+}

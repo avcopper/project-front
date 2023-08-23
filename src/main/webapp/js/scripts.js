@@ -76,21 +76,6 @@ $(function() {
 });
 
 /**
- * Показ ошибки
- * @param message - сообщение
- */
-function showError(message) {
-    $('.error').html(message).show();
-}
-
-/**
- * Скрытие блока с ошибкой
- */
-function hideError() {
-    $('.error').html('').hide();
-}
-
-/**
  * Загрузка данных на страницу - пагинация, список аккаунтов
  */
 function loadPage() {
@@ -320,6 +305,21 @@ function checkAccount(account, checkAllFields = true) {
         }
 
     return true;
+}
+
+/**
+ * Показ ошибки
+ * @param message - сообщение
+ */
+function showError(message) {
+    $('.error').html(message).show();
+}
+
+/**
+ * Скрытие блока с ошибкой
+ */
+function hideError() {
+    $('.error').html('').hide();
 }
 
 /**

@@ -38,12 +38,19 @@ table#users th {
 table#users td {
     text-align: center;
 }
-.error {
-    display: none;
-    margin: 10px 0;
-    padding: 10px;
-    color: #de002b;
-    border: 1px solid #de002b;
+.id {
+    width: 5%;
+}
+.name {
+    width: 15%;
+}
+.title {}
+.race,
+.profession,
+.level,
+.birthday,
+.banned {
+    width: 10%;
 }
 .edit,
 .delete,
@@ -102,9 +109,13 @@ table#users td {
     color: #fff;
     background-color: #337ab7;
 }
-#create {
+.error {
+    display: none;
+    margin: 10px 0;
+    padding: 10px;
+    color: #de002b;
+    border: 1px solid #de002b;
 }
-#user {}
 #user td {
     padding: 5px 5px 5px 0;
 }

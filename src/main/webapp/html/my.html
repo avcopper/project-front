@@ -1,11 +1,150 @@
-<html>
+<html lang="en">
 <head>
     <title>RPG</title>
-    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <meta charset="utf-8">
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/scripts.js"></script>
     <link href="/css/my.css" rel="stylesheet">
 </head>
 <body>
-<h1>RPG admin panel</h1>
+
+<div class="container">
+    <h1>RPG admin panel</h1>
+
+    <h4>Accounts list:</h4>
+
+    <div id="count">
+        <label>
+            Count per page:
+            <select name="count">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+        </label>
+    </div>
+
+    <table id="users">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Race</th>
+            <th>Profession</th>
+            <th>Level</th>
+            <th>Birthday</th>
+            <th>Banned</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <div id="pagination">
+        <a href="" class="current">1</a>
+        <a href="">2</a>
+        <a href="">3</a>
+        <a href="">4</a>
+        <a href="">5</a>
+        <a href="">10</a>
+    </div>
+
+    <hr>
+
+    <h4>Create new account:</h4>
+
+    <div class="error">
+        Ошибка сохранения
+    </div>
+
+    <form id="create">
+        <table id="user">
+            <tr>
+                <td><label for="name">Name <span class="red">*</span></label></td>
+                <td><input type="text" name="name" id="name" minlength="1" maxlength="12" required></td>
+            </tr>
+            <tr>
+                <td><label for="title">Title <span class="red">*</span></label></td>
+                <td><input type="text" name="title" id="title" minlength="1" maxlength="30" required></td>
+            </tr>
+            <tr>
+                <td><label for="race">Race <span class="red">*</span></label></td>
+                <td>
+                    <select name="race" id="race" required>
+                        <option value="HUMAN">HUMAN</option>
+                        <option value="DWARF">DWARF</option>
+                        <option value="ELF">ELF</option>
+                        <option value="GIANT">GIANT</option>
+                        <option value="ORC">ORC</option>
+                        <option value="TROLL">TROLL</option>
+                        <option value="HOBBIT">HOBBIT</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="profession">Profession <span class="red">*</span></label></td>
+                <td>
+                    <select name="profession" id="profession" required>
+                        <option value="WARRIOR">WARRIOR</option>
+                        <option value="ROGUE">ROGUE</option>
+                        <option value="SORCERER">SORCERER</option>
+                        <option value="CLERIC">CLERIC</option>
+                        <option value="PALADIN">PALADIN</option>
+                        <option value="NAZGUL">NAZGUL</option>
+                        <option value="WARLOCK">WARLOCK</option>
+                        <option value="DRUID">DRUID</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="level">Level <span class="red">*</span></label></td>
+                <td><input type="number" name="level" id="level" min="0" max="100" required></td>
+            </tr>
+            <tr>
+                <td><label for="birthday">Birthday <span class="red">*</span></label></td>
+                <td><input type="date" name="birthday" id="birthday" required></td>
+            </tr>
+            <tr>
+                <td><label for="banned">Banned</label></td>
+                <td>
+                    <select name="banned" id="banned">
+                        <option value="false">false</option>
+                        <option value="true">true</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="comment"><span class="red">*</span> - обязательно для заполнения</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td class="text-right">
+                    <button></button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
 
 </body>
 </html>

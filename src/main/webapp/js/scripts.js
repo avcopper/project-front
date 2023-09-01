@@ -26,7 +26,6 @@ $(function() {
         $(this).removeClass('edit').addClass('save').parent().find('.delete').removeClass('delete');
 
         showEditForm($(this).parent());
-        hideEditForm($(this).parent());
     });
 
     // сохранение аккаунта
@@ -192,6 +191,19 @@ function showEditForm(container) {
     raceContainer.html(getRaceContainer(account.race));
     professionContainer.html(getProfessionContainer(account.profession));
     bannedContainer.html(getBannedContainer(account.banned));
+
+    hideUnnecessaryEditForms();
+}
+
+/**
+ * Скрывает форму редактирования аккаунта
+ * @param container - родительский контейнер с формой
+ */
+function hideUnnecessaryEditForms(container) {
+    $('#users tr').not(container).find('input, select').each(function () {
+        let value = $(this).val();
+        $(this).parent().html(value);
+    });
 }
 
 /**
@@ -207,17 +219,6 @@ function getAccountInfo(container) {
     account.profession = container.find('.profession').html();
     account.banned = container.find('.banned').html();
     return account;
-}
-
-/**
- * Скрывает форму редактирования аккаунта
- * @param container - родительский контейнер с формой
- */
-function hideEditForm(container) {
-    $('#users tr').not(container).find('input, select').each(function () {
-        let value = $(this).val();
-        $(this).parent().html(value);
-    });
 }
 
 /**

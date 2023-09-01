@@ -246,7 +246,7 @@ function updateAccount(account, id = null) {
         },
         success: function(data){//console.log(data);
             clearNewAccountForm();
-            loadPage()
+            loadPage();
         }
     });
 }
